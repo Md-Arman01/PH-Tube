@@ -18,10 +18,10 @@
         }
     </style>
 </head>
-<body class="inter-font">
+<body class="inter-font container mx-auto ">
     <!-- header section -->
     <header>
-        <nav class="container mx-auto ">
+        <nav>
             <!-- nav-container -->
             <div class="flex justify-between my-8">
                 <div>
@@ -34,16 +34,30 @@
         </nav>
     </header>
     <main>
-        <!-- cetagorise 4 button -->
+        <!-- categories 4 button -->
         <div class="text-center my-8">
-            <div>
-                <input class="btn" type="radio" name="options" aria-label="Drawing" checked/>
-                <input class="btn" type="radio" name="options" aria-label="Drawing" />
-                <input class="btn" type="radio" name="options" aria-label="Drawing" />
-                <input class="btn" type="radio" name="options" aria-label="Drawing" />
+            <div id="categories-container" class="flex justify-center gap-6">
+                
               </div>
         </div>
-
+        <!-- card container -->
+        <div class="card-container">
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="image/Rectangle 1.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="flex gap-3 px-10 pt-5">
+                  <div>
+                    <img class="rounded-full" src="image/Icon.png" alt="">
+                  </div>
+                  <div class="space-y-2">
+                    <h1 class="text-[#171717] font-bold">Building a Winning UX Strategy Using the Kano Model</h1>
+                    <p class="text-[#666464] text-xs">Awlad Hossain</p>
+                    <p class="text-[#666464] text-xs">91K views</p>
+                  </div>
+                </div>
+              </div>
+        </div>
     </main>
     <script src="js/index.js"></script>
 </body>
