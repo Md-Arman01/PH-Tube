@@ -72,6 +72,10 @@ const categoriesClick =async (id) =>{
 }
 
 
+// blogbtn 
+const blogBtnClick = () => {
+  window.location.href = 'blog.html'
+}
 
 
 
