@@ -55,7 +55,7 @@ const categoriesClick =async (id) =>{
       <div class="card">
               <figure class="relative px-10 pt-10">
                 <img src='${element.thumbnail}' alt="Shoes" class="rounded-xl h-48 w-80" />
-                <h1 class="absolute bottom-3 right-12 bg-[#171717] text-xs text-white rounded-md py-1 px-2">${postedDate ? `${Math.floor(postedDate / 3600)}hrs ${Math.floor((postedDate - (hours * 3600)) / 60)} min ago` : ''}</h1>
+                <h1 class="absolute bottom-3 md:bottom-3 right-16 md:right-12 bg-[#171717] text-xs text-white rounded-md py-1 px-2">${postedDate ? `${Math.floor(postedDate / 3600)}hrs ${Math.floor((postedDate - (hours * 3600)) / 60)} min ago` : ''}</h1>
               </figure>
               <div class="flex gap-3 px-10 pt-5">
                 <div>
