@@ -19,36 +19,46 @@
     </style>
 </head>
 <body class="inter-font">
-    <div class="container mx-auto space-y-16 mt-10">
-        <!-- first qushtion -->
-        <div class="space-y-2">
-            <h1 class="text-4xl font-bold">1. Discuss the scope of var,let and const</h1>
-            <h4 class="text-xl font-semibold">Answer: </h4>
-            <li class="text-sm">The scope of a var variable is functional scope.</li>
-            <li class="text-sm">The scope of a let variable is block scope.</li>
-            <li class="text-sm">The scope of a const variable is block scope.</li>
+    <div class="container mx-auto h-screen flex items-center justify-center">
+        <div class="space-y-3">
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" /> 
+                <div class="collapse-title text-xl font-medium">
+                    Discuss the scope of var,let and const
+                </div>
+                <div class="collapse-content"> 
+                  <li>The scope of a var variable is functional scope.</li>
+                  <li>The scope of a let variable is block scope.</li>
+                  <li>The scope of a const variable is block scope.</li>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" /> 
+                <div class="collapse-title text-xl font-medium">
+                    Tell us the use cases of null and underfined
+                </div>
+                <div class="collapse-content"> 
+                  <li>Undefined means the variable has been declared, but its value has not been assigned.</li>
+                  <li>The typeof() operator returns undefined for an undefined variable.</li>
+                  <li>Null means an empty value or a blank value.</li>
+                  <li>The typeof() operator returns the type as an object for a variable whose value is assigned as null.</li>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" /> 
+                <div class="collapse-title text-xl font-medium">
+                    What do you mean by REST API?
+                </div>
+                <div class="collapse-content"> 
+                  <li>An API, or application programming interface, is a set of rules that define how applications or devices can connect to and communicate with each other.</li>
+                  <li>A REST API is an API that conforms to the design principles of the REST, or representational state transfer architectural style.</li>
+                </div>
+              </div>
         </div>
-        <!-- second qushtion -->
-        <div class="space-y-2">
-            <h1 class="text-4xl font-bold">2. Tell us the use cases of null and underfined</h1>
-            <h4 class="text-xl font-semibold">Answer: </h4>
-            <li class="text-sm">Undefined means the variable has been declared, but its value has not been assigned.</li>
-            <li class="text-sm">The typeof() operator returns undefined for an undefined variable.</li>
-            <li class="text-sm">Null means an empty value or a blank value.</li>
-            <li class="text-sm">The typeof() operator returns the type as an object for a variable whose value is assigned as null.</li>
-        </div>
-        <!-- third qushtion -->
-        <div class="space-y-2">
-            <h1 class="text-4xl font-bold">3. What do you mean by REST API?</h1>
-            <h4 class="text-xl font-semibold">Answer: </h4>
-            <li class="text-sm">An API, or application programming interface, is a set of rules that define how applications or devices can connect to and communicate with each other.</li>
-            <li class="text-sm">A REST API is an API that conforms to the design principles of the REST, or representational state transfer architectural style.</li>
-            
-        </div>
-
 
     </div>
-        
+
+    
     
 
 </body>
