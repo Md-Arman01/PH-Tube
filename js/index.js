@@ -10,7 +10,7 @@ const handleCategories = async() =>{
       // console.log(element)
       const div = document.createElement('div');
       div.innerHTML = `
-      <input  onclick="categoriesClick('${element.category_id}')" class="btn px-6 normal-case" type="radio" name="options" aria-label="${element.category}"/>
+      <button onclick="categoriesClick('${element.category_id}')" class="btn focus:bg-[#FF1F3D] focus:text-white px-5 md:px-6 normal-case">${element.category}</button>
       
       `
       categoriesContainer.appendChild(div)
@@ -25,7 +25,8 @@ const categoriesClick =async (id) =>{
   const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`)
   const idData = await response.json()
   const idDataArr = idData.data
-  // console.log(idDataArr)
+  // console.log(idData)
+
 
   // no data condition
   const noData = document.getElementById('no-data')
@@ -40,22 +41,17 @@ const categoriesClick =async (id) =>{
   cardContainer.innerHTML= ''
 
   idDataArr.forEach((element) =>{
-
     // time set
     const postedDate = element.others.posted_date
     const hours = Math.floor(postedDate / 3600);
     const minutes = Math.floor((postedDate - (hours * 3600)) / 60);
     // const seconds = postedDate - (hours * 3600) - (minutes * 60);
-    // ${postedDate ? `${Math.floor(postedDate / 3600)}hrs ${Math.floor((postedDate - (hours * 3600)) / 60)} min ago` : ''}
-    console.log(element.others)
-
-
       const div = document.createElement('div')
       div.innerHTML=`
       <div class="card">
               <figure class="relative px-10 pt-10">
                 <img src='${element.thumbnail}' alt="Shoes" class="rounded-xl h-48 w-80" />
-                <h1 class="absolute bottom-3 md:bottom-3 right-16 md:right-12 bg-[#171717] text-xs text-white rounded-md py-1 px-2">${postedDate ? `${Math.floor(postedDate / 3600)}hrs ${Math.floor((postedDate - (hours * 3600)) / 60)} min ago` : ''}</h1>
+                <h1 class="absolute bottom-3 md:bottom-3 right-14 md:right-12 bg-[#171717] text-xs text-white rounded-md">${postedDate ? `${Math.floor(postedDate / 3600)}hrs ${Math.floor((postedDate - (hours * 3600)) / 60)} min ago` : ''}</h1>
               </figure>
               <div class="flex gap-3 px-10 pt-5">
                 <div>
@@ -92,31 +88,22 @@ const categoriesClick =async (id) =>{
   })
   
   
-
 }
 
 // sortByView
-const sortByView = () =>{
+const sortByView =() =>{
+  
+  // categoriesClick('1000')
 
 
-  console.log('clicked it')
 }
-
-
 
 // blogbtn 
 const blogBtnClick = () => {
 window.location.href = 'blog.html'
 }
 
-
-
-
-
-
-
 handleCategories()
 categoriesClick('1000')
-
 
 
